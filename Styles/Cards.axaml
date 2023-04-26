@@ -1,0 +1,107 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+	<Style Selector="Border.DefaultPanel">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="Width" Value="400"/>
+	</Style>
+
+	<Style Selector="Border.DefaultHeader">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="0,0,0,2"/>
+		<Setter Property="Background" Value="#248FFC"/>
+		<Setter Property="Height" Value="50"/>
+	</Style>
+
+	<Style Selector="Label.DefaultHeaderTitle">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="20,0,0,0"/>
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="Foreground" Value="White"/>
+	</Style>
+
+	<Style Selector="StackPanel.DefaultBody">
+		<Setter Property="Margin" Value="0,20,0,40"/>
+		<Setter Property="Orientation" Value="Vertical"/>
+		<Setter Property="Spacing" Value="25"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="Border.DefaultFooter">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="0,2,0,0"/>
+		<Setter Property="Background" Value="#F0EDED"/>
+		<Setter Property="Padding" Value="20"/>
+	</Style>
+
+	<Style Selector="Label.ListPanelHeader">
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="Border.ListPanelHeader">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="Background" Value="#248FFC"/>
+		<Setter Property="BorderThickness" Value="0,0,0,2"/>
+		<Setter Property="Height" Value="50"/>
+	</Style>
+
+	<Style Selector="Border.ListPanel">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+	</Style>
+	
+
+	<Style Selector="Border.InfoPanel">
+		<Setter Property="Width" Value="380"/>
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+	</Style>
+
+	<Style Selector="Border.InfoPanelHeader">
+		<Setter Property="Height" Value="50"/>
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="0,0,0,2"/>
+		<Setter Property="Background" Value="#248FFC"/>
+	</Style>
+
+	<Style Selector="Label.InfoHeaderFirst">
+		<Setter Property="Margin" Value="20,0,0,0"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="Foreground" Value="White"/>
+	</Style>
+
+	<Style Selector="TextBlock.InfoHeaderSecond">
+		<Setter Property="Margin" Value="0,0,20,0"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="Foreground" Value="White"/>
+	</Style>
+
+	<Style Selector="Border.MenuBlock">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="0,0,2,0"/>
+		<Setter Property="Width" Value="300"/>
+		<Setter Property="Height" Value="110"/>
+		<Setter Property="Background" Value="#F0EDED"/>
+	</Style>
+
+	<Style Selector="Border.MenuBlockContainer">
+		<Setter Property="Height" Value="150"/>
+		<Setter Property="Background" Value="#F0EDED"/>
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="0,2,0,2"/>
+	</Style>
+
+</Styles>

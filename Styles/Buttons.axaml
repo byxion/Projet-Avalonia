@@ -1,0 +1,110 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<!-- Add Controls for Previewer Here -->
+		</Border>
+	</Design.PreviewWith>
+
+	<Style Selector="Button.Action">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="CornerRadius" Value="4"/>
+		<Setter Property="Width" Value="130"/>
+	</Style>
+
+	<Style Selector="Button.Action:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="White" />
+		<Setter Property="TextBlock.Foreground" Value="Black"/>
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="CornerRadius" Value="4"/>
+	</Style>
+
+	<Style Selector="Button.Ok">
+		<Setter Property="Background" Value="#248FFC"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="CornerRadius" Value="4"/>
+		<Setter Property="Width" Value="130"/>
+	</Style>
+
+	<Style Selector="Button.Ok:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="#248FFC" />
+		<Setter Property="TextBlock.Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="CornerRadius" Value="4"/>
+	</Style>
+
+	<Style Selector="Button.Cancel">
+		<Setter Property="Background" Value="#EC1211"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="CornerRadius" Value="4"/>
+		<Setter Property="Width" Value="130"/>
+	</Style>
+
+	<Style Selector="Button.Cancel:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="#EC1211" />
+		<Setter Property="TextBlock.Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="CornerRadius" Value="4"/>
+	</Style>
+	
+	<Style Selector="Label.Action">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="Foreground" Value="Black"/>
+	</Style>
+
+	<Style Selector="Label.OkCancel">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="Foreground" Value="White"/>
+	</Style>
+
+	<Style Selector="Button.Default">
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="#248FFC"/>
+	</Style>
+
+	<Style Selector="Button.Default:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="TextBlock.Foreground" Value="White"/>
+		<Setter Property="Background" Value="#248FFC"/>
+	</Style>
+
+	<Style Selector="Button.File">
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Margin" Value="20,0,0,0"/>
+	</Style>
+
+	<Style Selector="Button.File:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="TextBlock.Foreground" Value="Black"/>
+		<Setter Property="Background" Value="White"/>
+	</Style>
+
+	<Style Selector="Button.MenuBlock">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Width" Value="45"/>
+		<Setter Property="Height" Value="35"/>
+	</Style>
+
+	<Style Selector="Button.MenuBlock:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="Background" Value="White"/>
+	</Style>
+
+	
+
+</Styles>

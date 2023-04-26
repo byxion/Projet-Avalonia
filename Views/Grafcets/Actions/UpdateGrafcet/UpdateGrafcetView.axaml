@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:material="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:views="clr-namespace:GAG.Views"
+             x:Class="GAG.Views.UpdateGrafcetView">
+	<ScrollViewer VerticalScrollBarVisibility="Hidden">
+		<StackPanel Orientation="Vertical"
+					Margin="0,70">
+			<Border	Classes="DefaultPanel">
+				<StackPanel Orientation="Vertical">
+					<Border Classes="DefaultHeader">
+						<Label Classes="DefaultHeaderTitle">
+							Modification d'un grafcet
+						</Label>
+					</Border>
+					<views:UpdateGrafcetBodyView/>
+					<views:UpdateGrafcetFooterView/>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

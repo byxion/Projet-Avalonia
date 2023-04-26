@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>exe</OutputType>
+    <TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport> 
+	  
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <UseWPF>True</UseWPF>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TrimmerRootDescriptor Include="Roots.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.18" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.18" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.18" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.18" />
+    <PackageReference Include="MaterialDesign.Avalonia.PackIcon" Version="1.25.0" />
+    <PackageReference Include="MuPDFCore.MuPDFRenderer" Version="1.6.0" />
+    <PackageReference Include="Opc.UaFx.Client" Version="2.30.0" />
+    <PackageReference Include="SharpPDF" Version="1.1.0" />
+    <PackageReference Include="System.Data.OleDb" Version="7.0.0" />
+    <PackageReference Include="VectSharp.PDF" Version="2.6.1" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{c0c07587-41a7-46c8-8fbd-3f9c8ebe2ddc}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Grafcets\GrafcetPanel\GafcetPanelHeaderView.axaml.cs">
+      <DependentUpon>GafcetPanelHeaderView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Grafcets\GrafcetMainView.axaml.cs">
+      <DependentUpon>GrafcetMainView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Grafcets\GrafcetPanel\GrafcetPanelBodyView.axaml.cs">
+      <DependentUpon>GrafcetPanelBodyView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\IConsWindow.axaml.cs">
+      <DependentUpon>IconsWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OPC\DemoOPCView.axaml.cs">
+      <DependentUpon>DemoOPCView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ViewerWindow.axaml.cs">
+      <DependentUpon>ViewerWindow.axaml</DependentUpon>
+    </Compile>
+	<Compile Update="Views\Components\Lists\MainDataGrid\MainDataGridListView.axaml.cs">
+	    <DependentUpon>MainDataGridListView.axaml</DependentUpon>
+	</Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Data\Entities\" />
+    <Folder Include="Views\Layout\header\" />
+  </ItemGroup>
+  
+</Project>

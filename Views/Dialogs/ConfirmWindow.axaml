@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:material="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+        mc:Ignorable="d" d:DesignWidth="100" d:DesignHeight="450"
+		Width="400" Height="190"
+		MaxWidth="400" MaxHeight="190"
+        WindowStartupLocation="CenterScreen"
+		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="NoChrome"
+		ExtendClientAreaTitleBarHeightHint="-1"
+        x:Class="GAG.Views.ConfirmWindow"
+		Icon="/Assets/Images/LOGO_ELKEM_ICON_RGB_POS.png"
+        Title="Confirmation">
+	<StackPanel Orientation="Vertical"
+				Spacing="10">
+		
+		<Panel Margin="0,20,0,10">
+			<PathIcon Classes="DeleteDialog" />
+		</Panel>
+		
+		<TextBlock Classes="DeleteDialog"
+				   Text="Voulez-vous vraiment supprimer le grafcet ?" />
+		
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					Spacing="10"
+				    Grid.Row="2"
+					Margin="0,10,0,10">
+
+			<Button Classes="Ok"
+					Width="100"
+					Command="{Binding OkCommand}">
+				<StackPanel Orientation="Horizontal" Spacing="5">
+					<material:PackIcon Kind="1573"
+									   Height="24" Width="24"
+									   Foreground="White"
+								       HorizontalAlignment="Center"/>
+					<Label Grid.Column="1"
+							Classes="OkCancel"
+							Content="Oui">
+					</Label>
+				</StackPanel>
+			</Button>
+
+			<Button Classes="Cancel"
+					Width="100"
+					Command="{Binding CancelCommand}">
+				<StackPanel Orientation="Horizontal" Spacing="5">
+					<material:PackIcon Kind="1812"
+									   Height="24" Width="24"
+									   Foreground="White"
+								       HorizontalAlignment="Center"/>
+					<Label Grid.Column="1"
+						   Classes="OkCancel"
+						   Content="Non">
+					</Label>
+				</StackPanel>
+			</Button>
+
+		</StackPanel>
+	</StackPanel>
+</Window>

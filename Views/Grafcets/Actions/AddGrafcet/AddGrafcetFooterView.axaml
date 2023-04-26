@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:material="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+             x:Class="GAG.Views.AddGrafcetFooterView">
+	<Border Classes="DefaultFooter">
+
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Right"
+					Spacing="10">
+
+			<Button Classes="Ok"
+					Command="{Binding Ok}">
+				<StackPanel Orientation="Horizontal" Spacing="5">
+					<material:PackIcon Kind="1573"
+						   Height="24" Width="24"
+						   Foreground="White"
+						   HorizontalAlignment="Center"/>
+					<Label Classes="OkCancel"
+							Content="Enregistrer">
+					</Label>
+				</StackPanel>
+			</Button>
+
+			<Button Classes="Cancel"
+					Command="{Binding Cancel}">
+				<StackPanel Orientation="Horizontal" Spacing="5">
+					<material:PackIcon Kind="1812"
+						   Height="24" Width="24"
+						   Foreground="White"
+						   HorizontalAlignment="Center"/>
+					<Label Classes="OkCancel"
+						   Content="Annuler">
+					</Label>
+				</StackPanel>
+			</Button>
+		</StackPanel>
+
+	</Border>
+
+</UserControl>

@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GAG.Views.DemoOPCView">
+	<StackPanel Orientation="Vertical"
+					Margin="0,70">
+
+		<Border	Classes="DefaultPanel"
+				Width="550">
+
+			<StackPanel Orientation="Vertical">
+
+				<Border Classes="DefaultHeader">
+					<Label Classes="DefaultHeaderTitle">
+						Demo OPC UA
+					</Label>
+				</Border>
+
+				<Grid Margin="20,40,20,40"
+					  HorizontalAlignment="Center"
+					  ColumnDefinitions ="Auto,*"
+					  Grid.RowDefinitions="Auto,Auto">
+
+					<TextBox  Grid.Row="0"
+							  Grid.Column="0"
+								Width="300"
+								Margin="0,0,0,10"
+								AcceptsReturn="False"
+								Text ="{Binding OpcWriteValue}"/>
+
+					<Button Grid.Column="1"
+							Width="110"
+							Classes="Default"
+							Grid.Row="0"
+							Margin="50,0,0,10"
+							Command="{Binding WriteOPC}">
+						Ecrire
+					</Button>
+
+					<TextBox Grid.Row="1"
+							 Grid.Column="0"
+							 Width="300"
+							 Margin="0,0,0,10"
+							 AcceptsReturn="False"
+							 Text ="{Binding OpcReadValue}"/>
+
+					<Button Grid.Column="1"
+							Grid.Row="1"
+							Width="110"
+							Classes="Default"
+							Margin="50,0,0,10"
+							Command="{Binding ReadOPC}">
+						Lire
+					</Button>
+				</Grid>
+
+			</StackPanel>
+
+		</Border>
+
+	</StackPanel>
+</UserControl>

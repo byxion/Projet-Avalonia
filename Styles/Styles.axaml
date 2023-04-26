@@ -1,0 +1,140 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<!-- Add Controls for Previewer Here -->
+		</Border>
+	</Design.PreviewWith>
+	
+	<Style Selector="Label.Menu">
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="Foreground" Value="Black"/>
+	</Style>
+	
+	<Style Selector="Button.Menu">
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="Background" Value="White"/>
+	</Style>
+
+	<Style Selector="TextBlock.NomApplication">
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="25"/>
+		<Setter Property="FontFamily" Value="Champagne &amp; Limousines"/>
+	</Style>
+
+	<Style Selector="Grid.AppHeader">
+		<Setter Property="Height" Value="65"/>
+		<Setter Property="Background" Value="#248FFC"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="TextBlock.Item">
+		<Setter Property="TextWrapping" Value="Wrap"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="ListBoxItem">
+		<Setter Property="BorderBrush" Value="#DCDCDC"/>
+		<Setter Property="BorderThickness" Value="0,0,0,1"/>
+	</Style>
+
+	<Style Selector="ListBox">
+		<Setter Property="Height" Value="380"/>
+		<Setter Property="Background" Value="White"/>
+	</Style>
+
+	<Style Selector="Label.MenuBlock">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="14"/>
+	</Style>
+
+	<Style Selector="PathIcon.DeleteDialog">
+		<Setter Property="Height" Value="50"/>
+		<Setter Property="Foreground" Value="#EC1211"/>
+		<Setter Property="Width" Value="90"/>
+		<Setter Property="Opacity" Value="0.6"/>
+		<Setter Property="Data" Value="{StaticResource delete_regular}"/>
+	</Style>
+
+	<Style Selector="TextBlock.DeleteDialog">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="TextWrapping" Value="Wrap"/>
+		<Setter Property="FontSize" Value="16"/>
+	</Style>
+
+	<Style Selector="PathIcon.IconApp">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Data" Value="{StaticResource organization_regular}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Height" Value="28"/>
+		<Setter Property="Width" Value="30"/>
+	</Style>
+
+	<Style Selector="PathIcon.ActionDelete">
+		<Setter Property="Margin" Value="0,0,5,0"/>
+		<Setter Property="Width" Value="22"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Data" Value="{StaticResource delete_regular}"/>
+		<Setter Property="Foreground" Value="#EC1211"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="PathIcon.ActionEdit">
+		<Setter Property="Width" Value="22"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Data" Value="{StaticResource edit_regular}"/>
+		<Setter Property="Foreground" Value="#248FFC"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="PathIcon.ActionDuplicate">
+		<Setter Property="Width" Value="22"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Data" Value="{StaticResource window_multiple_regular}"/>
+		<Setter Property="Foreground" Value="#248FFC"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="PathIcon.ActionCancel">
+		<Setter Property="Width" Value="18"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Data" Value="{StaticResource dismiss_regular}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="PathIcon.ActionOk">
+		<Setter Property="Width" Value="18"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Data" Value="{StaticResource checkmark_regular}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style Selector="StackPanel.FirstBody">
+		<Setter Property="Orientation" Value="Vertical"/>
+		<Setter Property="Spacing" Value="10"/>
+	</Style>
+
+	<Style Selector="StackPanel.SecondBody">
+		<Setter Property="Orientation" Value="Horizontal"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Spacing" Value="40"/>
+		<Setter Property="Margin" Value="20"/>
+	</Style>
+
+	<Style Selector="StackPanel.PanelBody">
+		<Setter Property="Orientation" Value="Vertical"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Spacing" Value="10"/>
+		<Setter Property="Margin" Value="20"/>
+	</Style>
+	
+</Styles>

@@ -1,0 +1,89 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="GAG.Views.ViewerWindow"
+		xmlns:mupdf="clr-namespace:MuPDFCore.MuPDFRenderer;assembly=MuPDFCore.MuPDFRenderer"
+        xmlns:helpers="clr-namespace:GAG.Helpers"
+		xmlns:converters="clr-namespace:GAG.Helpers.Converters;assembly=GAG"
+        xmlns:anim="clr-namespace:Avalonia.Animation;assembly=MuPDFCore.MuPDFRenderer"
+        mc:Ignorable="d" Width="1200" Height="700"
+        MinWidth="300" MinHeight="100"
+		WindowState="Maximized"
+		Opened="WindowOpened" FontSize="16"
+        Closed="WindowClosed" KeyDown="WindowKeyDown"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Center"
+		Name="ElementName"
+		Icon="/Assets/Images/LOGO_ELKEM_ICON_RGB_POS.png"
+		Title="Visionneuse">
+	<!--ExtendClientAreaToDecorationsHint="True">-->
+	<Window.Resources>
+		<!--Used when converting page numbers: the page numbers are 0-based, but most people would expect the first page to be page number 1.-->
+		<converters:IncreaseByOne x:Key="increaseByOne"/>
+	</Window.Resources>
+		<Grid  Margin="10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+
+			<!--The PDF renderer.-->
+			<mupdf:PDFRenderer Name="MuPDFRenderer" Background="#F0EDED" PageBackground="White" PropertyChanged="RendererPropertyChanged" ZoomIncrement="1.75" ClipToBounds="True">
+				<!--Fancy transition so that we can zoom or pan around smoothly. Disabling this would result in better performance, though.-->
+				<mupdf:PDFRenderer.Transitions>
+					<Transitions>
+						<anim:RectTransition Property="DisplayArea" Duration="0:0:0:0.1" />
+					</Transitions>
+				</mupdf:PDFRenderer.Transitions>
+			</mupdf:PDFRenderer>
+
+			<!--Various controls-->
+			<ScrollViewer Grid.Column="1" Margin="10, 0, 0, 0" Padding="0,0,10,0" VerticalScrollBarVisibility="Visible">
+				<Grid Name="ControlsGrid">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+
+					<!--Show the current page number. The value can be retrieved through a Binding, but updating it requires
+        a re-initialisation of the viewer, which is performed by the event handler.-->
+					<Grid Grid.Row="0" Margin="0, 5, 0, 5">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+						<TextBlock VerticalAlignment="Center" FontWeight="Bold">Page:</TextBlock>
+						<NumericUpDown Grid.Column="1" 
+									   FormatString="0"
+									   Minimum="1" 
+									   Maximum="{Binding #ElementName.MaxPageNumber}"
+									   VerticalAlignment="Center"
+									   Margin="2"
+									   Value="{Binding #MuPDFRenderer.PageNumber, Converter={StaticResource increaseByOne}}"
+									   ValueChanged="PageNumberChanged">
+							
+						</NumericUpDown>
+						
+						<TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="10, 0, 5, 0">/</TextBlock>
+						<TextBlock Grid.Column="3" VerticalAlignment="Center" Margin="0, 0, 0, 0" Text="{Binding #ElementName.MaxPageNumber}"></TextBlock>
+					</Grid>
+
+					<!--Navigator showing a thumbnail of the page and a rectangle representing the current DisplayArea.-->
+					<Canvas Grid.Row="1" Height="200" Width="200" ClipToBounds="True" VerticalAlignment="Top" Background="#F0EDED" Name="NavigatorCanvas" PointerPressed="NavigatorPointerPressed" PointerReleased="NavigatorPointerReleased" PointerMoved="NavigatorPointerMoved">
+						<Canvas Name="PageAreaCanvas" Width="100" Height="100" Background="White">
+							<Image Name="PageAreaImage" Width="100" Height="100"></Image>
+						</Canvas>
+						<Rectangle Fill="#4077AADD" Stroke="#77AADD" StrokeThickness="2" Name="DisplayAreaRectangle" Width="50" Height="50"></Rectangle>
+					</Canvas>
+
+				</Grid>
+			</ScrollViewer>
+		</Grid>
+</Window>

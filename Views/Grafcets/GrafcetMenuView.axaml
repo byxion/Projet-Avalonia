@@ -1,0 +1,98 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GAG.Views.GrafcetMenuView">
+	<Border Classes="MenuBlockContainer">
+		<StackPanel Orientation="Horizontal">
+
+			<Border Classes="MenuBlock">
+				<Grid ColumnDefinitions="Auto,Auto"
+					  Margin="20,0,0,0"
+					  VerticalAlignment="Top" >
+					<Button Classes="MenuBlock"
+							Grid.Column="0">
+						<Label Classes="MenuBlock"
+							   Content="{Binding $parent[Window].DataContext.GafcetNumber}">
+						</Label>
+					</Button>
+					<Label Classes="MenuBlock"
+						   Content="Tous les grafcets"
+						   Grid.Column="1"
+						   Margin="5,0,0,0">
+					</Label>
+				</Grid>
+			</Border>
+
+			<Border Classes="MenuBlock">
+				<Grid ColumnDefinitions="Auto,Auto"
+					  RowDefinitions="Auto,Auto"
+					  Margin="20,0,0,0">
+					<Button Classes="MenuBlock"
+							Grid.Column="0"
+							Grid.Row="0">
+						<Label Classes="MenuBlock"
+						   Content="10">
+						</Label>
+					</Button>
+					<Label Classes="MenuBlock"
+						   Content="Grafcets formules"
+						   Grid.Column="1"
+						   Grid.Row="0"
+						   Margin="5,0,0,0">
+					</Label>
+					<Button Classes="MenuBlock"
+							Grid.Column="0"
+							Grid.Row="1">
+						<Label Classes="MenuBlock"
+						   Content="10">
+						</Label>
+					</Button>
+					<Label Classes="MenuBlock"
+						   Content="Grafcets simples"
+						   Grid.Column="1"
+						   Grid.Row="1">
+					</Label>
+				</Grid>
+			</Border>
+
+			<Border Classes="MenuBlock">
+				<Grid ColumnDefinitions="Auto,Auto"
+					  Margin="20,0,0,0"
+					  VerticalAlignment="Top" >
+					<Button Classes="MenuBlock"
+							Grid.Column="0">
+						<Label Classes="MenuBlock"
+							   Content="10">
+						</Label>
+					</Button>
+					<Label Classes="MenuBlock"
+						   Content="Recettes"
+						   Grid.Column="1"
+						   Margin="5,0,0,0">
+					</Label>
+				</Grid>
+			</Border>
+
+			<Border Classes="MenuBlock">
+				<Grid ColumnDefinitions="Auto,Auto"
+					  Margin="20,0,0,0"
+					  VerticalAlignment="Top" >
+					<Button Classes="MenuBlock"
+							Grid.Column="0">
+						<Label Classes="MenuBlock"
+							   Content="10">
+						</Label>
+					</Button>
+					<Label Classes="MenuBlock"
+						   Content="MSTR"
+						   Grid.Column="1"
+						   Margin="5,0,0,0">
+					</Label>
+				</Grid>
+			</Border>
+			
+		</StackPanel>
+	</Border>
+</UserControl>

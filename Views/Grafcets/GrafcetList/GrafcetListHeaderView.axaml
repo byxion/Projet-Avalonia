@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:material="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GAG.Views.GrafcetListHeaderView">
+	<Border Classes="ListPanelHeader">
+			<Grid ColumnDefinitions="200,150,450">
+				<Grid Grid.Column="0">
+					<Label  Classes="ListPanelHeader"
+							Margin="30,0,0,0">
+						Nom
+					</Label>
+				</Grid>
+				<Grid Grid.Column="1">
+					<Label  Classes="ListPanelHeader"
+							Margin="10,0,0,0">
+						Type
+					</Label>
+				</Grid>
+				<Grid Grid.Column="2">
+					<Label  Classes="ListPanelHeader">
+						Titre
+					</Label>
+				</Grid>
+			</Grid>
+	</Border>
+</UserControl>

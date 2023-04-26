@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GAG.Views.UpdateGrafcetBodyView">
+	<StackPanel Classes="DefaultBody">
+		<StackPanel Spacing="10"
+					Orientation="Vertical"
+					HorizontalAlignment="Center">
+			<Label FontSize="14">Nom: </Label>
+			<TextBox  Width="300"
+					  AcceptsReturn="False"
+					  IsEnabled="False"
+					  Text="{Binding Nom}"
+					  Watermark="Enter le nom"/>
+		</StackPanel>
+
+		<StackPanel Spacing="10"
+					Orientation="Vertical"
+					HorizontalAlignment="Center">
+
+			<Label FontSize="14"> Titre:</Label>
+			<TextBox Width="300"
+					 Text="{Binding Titre}"
+					 Watermark="Enter le titre"/>
+		</StackPanel>
+
+		<StackPanel Spacing="10"
+					Orientation="Vertical"
+					HorizontalAlignment="Center">
+			<Label FontSize="14">Type:</Label>
+			<ComboBox Items="{Binding cbItems}"
+					  Width="300"
+					  SelectedItem="{Binding SelectedcbItem}"/>
+		</StackPanel>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mat="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="GAG.Views.IconsWindow"
+        Title="IConsWindow">
+	<Grid RowDefinitions="*,Auto">
+		<DataGrid Grid.Row="0"  Name="MyDataGrid" Items="{Binding Items}" AutoGenerateColumns="False" >
+			<DataGrid.Columns>
+				<DataGridTextColumn  IsReadOnly="True" Header="Num"  Binding="{Binding Num}"/>
+				<DataGridTemplateColumn IsVisible="True" Header="Modifier">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<mat:PackIcon Kind="{Binding Num}"  Height="24" Width="24"  HorizontalAlignment="Center" Foreground="Black"/>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Grid Grid.Row="1" HorizontalAlignment="Right" ColumnDefinitions="Auto,Auto,Auto">
+
+			
+		</Grid>
+
+	</Grid>
+</Window>

@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="500" Height="280"
+		xmlns:vm="clr-namespace:GAG.ViewModels.Components.Lists.MainDataGrid"
+        x:Class="GAG.Views.SortDataGrid"
+        x:DataType="vm:AddItemWindowViewModel"
+        Title="{Binding Title}">
+        
+        <Design.DataContext>
+                <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+			<vm:SortDataGridViewModel/>
+        </Design.DataContext>
+        
+        <Grid RowDefinitions="3*,*">
+                <Border Grid.Row="0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Label>Grafcet : </Label>
+                                <ComboBox Items="{Binding GrafcetList}" SelectedItem="{Binding SelectedGrafcet}" />
+                        </StackPanel>
+                </Border>
+                <Border Grid.Row="1">
+                        <StackPanel Orientation="Horizontal" Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Button Command="{Binding Save}">Filtrer</Button>
+                                <Button Command="{Binding Cancel}">Annuler</Button>
+                        </StackPanel>
+                </Border>
+        </Grid>
+        
+</Window>

@@ -1,0 +1,13 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:GAG.Views"
+		xmlns:mat="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+        x:Class="GAG.Views.MainWindow"
+		Icon="/Assets/Images/LOGO_ELKEM_ICON_RGB_POS.png"
+		Title="GAG"
+	    ExtendClientAreaToDecorationsHint="True">
+		<StackPanel Orientation="Vertical">
+				<views:MainHeaderView/>
+				<views:MainTabView/>
+		</StackPanel>
+</Window>

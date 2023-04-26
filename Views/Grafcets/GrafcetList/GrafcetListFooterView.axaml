@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:material="clr-namespace:MaterialDesign.Avalonia.PackIcon;assembly=MaterialDesign.Avalonia.PackIcon"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GAG.Views.GrafcetListFooterView">
+	<Border Classes="DefaultFooter">
+
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Right"
+					Spacing="10">
+
+			<Button Classes="Action"
+					Command="{Binding CreateAndViewCommand}">
+				<StackPanel Orientation="Horizontal" Spacing="5">
+					<material:PackIcon Kind="5080"
+										Height="24" Width="24"
+										Foreground="#248FFC"
+										HorizontalAlignment="Center"/>
+					<Label Classes="Action"
+							Content="Imprimer">
+					</Label>
+				</StackPanel>
+			</Button>
+
+			<Button Classes="Action"
+					Command="{Binding $parent[Window].DataContext.AddGrafcet}">
+				<StackPanel Orientation="Horizontal" Spacing="5">
+					<material:PackIcon Kind="4988"
+									   Height="25" Width="25"
+									   Foreground="#248FFC"
+									   HorizontalAlignment="Center"/>
+					<Label Classes="Action"
+						   Content="Ajouter">
+					</Label>
+				</StackPanel>
+			</Button>
+			
+		</StackPanel>
+
+	</Border>
+</UserControl>

@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GAG.Views.MainTabView"
+			 xmlns:views="clr-namespace:GAG.Views"
+			 xmlns:control = "clr-namespace:GAG.Drawing">
+	<TabControl>
+		<TabItem>
+			<TabItem.Template>
+				<ControlTemplate>
+					<Button Classes="File">
+						Fichier
+					</Button>
+				</ControlTemplate>
+			</TabItem.Template>
+		</TabItem>
+		<TabItem IsSelected="True">
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Grafcet
+				</Label>
+			</TabItem.Header>
+			<ContentControl Content="{Binding GrafcetMain}"/>
+		</TabItem>
+		<TabItem >
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Automate
+				</Label>
+			</TabItem.Header>
+		</TabItem>
+		<TabItem >
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Entrées/Sorties
+				</Label>
+			</TabItem.Header>
+		</TabItem>
+		<TabItem >
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Alarmes/Sécurités
+				</Label>
+			</TabItem.Header>
+		</TabItem>
+		<TabItem >
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Divers
+				</Label>
+			</TabItem.Header>
+		</TabItem>
+		<TabItem IsVisible="False">
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Demo OPC UA
+				</Label>
+			</TabItem.Header>
+			<views:DemoOPCView />
+		</TabItem>
+		<TabItem  IsVisible="False">
+			<TabItem.Header>
+				<Label Classes="Menu">
+					Dessin Custom
+				</Label>
+			</TabItem.Header>
+			<control:TimeSeriesPage/>
+		</TabItem>
+	</TabControl>
+</UserControl>
